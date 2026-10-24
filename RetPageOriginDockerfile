@@ -5,7 +5,7 @@
 from node:22 as builder
 run mkdir /spoke && cd /spoke
 copy package.json ./
-copy yarn.lock ./
+#copy yarn.lock ./
 run yarn install
 copy . .
 env BASE_ASSETS_PATH="{{rawspoke-base-assets-path}}"
