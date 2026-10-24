@@ -6,7 +6,7 @@ from node:22 as builder
 run mkdir /spoke && cd /spoke
 copy package.json ./
 copy yarn.lock ./
-run yarn install --frozen-lockfile
+run yarn install
 copy . .
 env BASE_ASSETS_PATH="{{rawspoke-base-assets-path}}"
 # TODO we should be setting BUILD_VERSION, probably pass in git sha or run number as an ARG
